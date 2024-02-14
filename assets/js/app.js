@@ -2,7 +2,7 @@ var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 const speakBtn = document.querySelector('#speakBtn');
  
 const recognition = new SpeechRecognition();
-recognition.lang = 'en-US';
+recognition.lang = 'nl-BE';
  
 recognition.onresult = function (event) {
   const transcript = event.results[0][0].transcript;
