@@ -15,11 +15,11 @@
   <!-- Tab Title -->
   <title>Web Speech API - Quiz</title>
 </head>
-
+<!-- Start Body -->
 <body>
   <!-- Main Section -->
-  <main class="container">
-    <section class="text-center">
+  <main class="container d-flex flex-column justify-content-center align-items-center mt-5 pt-5">
+    <section id="intro-section" class="text-center d-flex flex-column gap-3 mt-5 pt-5">
       <!-- Intro Section -->
         <p>#WeAreXD</p>
         <h1>Welkom bij de XD Quiz</h1>
@@ -27,10 +27,10 @@
           U krijgt enkele beschrijvingen over een specifieke manifesto en het is aan u om te raden over welke manifesto het gaat.
           Uw antwoord mag u via de microfoon inspreken en wij controleren of dat u de juiste manifesto heeft ingesproken.
         </p>
+        <button class="btn btn-primary align-self-center">Start Quiz</button>
     </section>
     <!-- Quiz Section -->
-    <section>
-
+    <section id="quiz-section">
       <button id="speakBtn">speak</button>
       <p id="output"></p>
     </section>

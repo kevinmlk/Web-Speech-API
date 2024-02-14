@@ -14,3 +14,13 @@ h1 {
   font-size: 6em;
   font-weight: bold;
 }
+
+/* Id's & Classes */
+#quiz-section {
+  display: none;
+}
+
+/* Bootstrap */
+.btn {
+  width: fit-content;
+}
