@@ -25,8 +25,10 @@ p {
   display: none !important;
 }
 
-.question-article {
-  
+.answers-container li {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 
 /* Bootstrap */

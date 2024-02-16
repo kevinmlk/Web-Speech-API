@@ -15,19 +15,27 @@ const answersContainer = document.querySelector('.answers-container');
 const answerContainerItems = answersContainer.querySelectorAll('li');
 
 // Answers
-const answerQuestion1 = 'pragmatic dreamers';
+const answerQuestion1 = 'PRAGMATIC DREAMERS';
 const answerQuestion2 = 'pragmatic dreamers';
 const answerQuestion3 = 'pragmatic dreamers';
- 
+console.log(answerQuestion1);
 const recognition = new SpeechRecognition();
 recognition.lang = 'en-US';
  
 recognition.onresult = function (event) {
-  const transcript = event.results[0][0].transcript;
-  console.log(transcript);
-  document.querySelector('#output').innerHTML += transcript + '<br>';
+  let transcript = event.results[0][0].transcript;
+  let upperTranscript = transcript.toUpperCase();
+  console.log('Ingesproken antwoord: ' + upperTranscript);
+  
+  document.querySelector('#output').innerHTML += upperTranscript;
   speakBtn.disabled = false;
-}
+
+  // Loop over list items to find the matching answer
+  
+  if (upperTranscript === answerQuestion1) {
+    console.log('Match found!');
+  }
+};
 
 // EventListeners
 speakBtn.addEventListener('click', function () {
