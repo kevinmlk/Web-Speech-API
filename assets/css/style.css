@@ -21,8 +21,12 @@ p {
 }
 
 /* Id's & Classes */
-#quiz-section {
-  display: none;
+.hidden {
+  display: none !important;
+}
+
+.active-question {
+  display: flex;
 }
 
 /* Bootstrap */

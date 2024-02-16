@@ -27,11 +27,12 @@
           U krijgt enkele beschrijvingen over een specifieke manifesto en het is aan u om te raden over welke manifesto het gaat.
           Uw antwoord mag u via de microfoon inspreken en wij controleren of dat u de juiste manifesto heeft ingesproken.
         </p>
-        <button id="btn-start" class="btn btn-primary align-self-center">Start Quiz</button>
+        <button id="start-button" class="btn btn-primary align-self-center">Start Quiz</button>
     </section>
     <!-- Quiz Section -->
     <section id="quiz-section">
-      <article id="quiz-question-1">
+      <!-- Question 1 -->
+      <article id="quiz-question-1" class="question-article hidden">
         <div>
           <h2>Vraag 1</h2>
           <p>Tot welke XD manifesto behoort de onderstaande beschrijving?</p>
@@ -42,9 +43,9 @@
           <li>Pragmatic dreamers</li>
           <li>Determined to not do basic</li>
         </ul>
+        <button id="speak-button">speak</button>
+        <p id="output"></p>
       </article>
-      <button id="speakBtn">speak</button>
-      <p id="output"></p>
     </section>
   </main>
   <!-- JS Script -->
