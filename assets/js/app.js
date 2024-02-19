@@ -13,6 +13,7 @@ const quizQuestion1 = document.querySelector('#quiz-question-1');
 // Answers container & list items
 const answersContainer = document.querySelector('.answers-container');
 const answerContainerItems = answersContainer.querySelectorAll('li');
+const succesMessageContainer = document.querySelector('.succes-message-container');
 
 // Answers
 const answerQuestion1 = 'PRAGMATIC DREAMERS';
@@ -27,13 +28,16 @@ recognition.onresult = function (event) {
   let upperTranscript = transcript.toUpperCase();
   console.log('Ingesproken antwoord: ' + upperTranscript);
   
-  document.querySelector('#output').innerHTML += upperTranscript;
+  document.querySelector('#output').textContent = 'Ingesproken antwoord: ' + upperTranscript;
   speakBtn.disabled = false;
 
   // Loop over list items to find the matching answer
   
   if (upperTranscript === answerQuestion1) {
     console.log('Match found!');
+    succesMessageContainer.classList.remove('hidden');
+  } else {
+    console.log('No match found...');
   }
 };
 
