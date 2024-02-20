@@ -90,6 +90,9 @@ const showCurrentQuestion = () => {
     synth.speak(utterance);
 
   } else if (currentQuestion === 2) {
+    // Remove last user input
+    document.querySelector('.output').textContent = 'Ingesproken antwoord: ';
+
     // Show second question 2
     quizQuestion1.classList.add('hidden');
     quizQuestion2.classList.remove('hidden');
