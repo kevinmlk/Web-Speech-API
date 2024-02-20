@@ -1,3 +1,30 @@
+'use strict';
+
+// Store speech synthesis in a variable
+const synth = window.speechSynthesis;
+
+// Store the utterance in a variable
+let utterance = new SpeechSynthesisUtterance();
+// utterance.text = 'Hello world!';
+utterance.lang = 'en-US';
+utterance.pitch = 1.2;
+utterance.rate = .9;
+
+function matchVoiceToLang(voice) {
+  if (voice.lang === utterance) {
+    return true;
+  } {
+    return false
+  }
+}
+
+synth.onvoiceschanged = () => {
+  let voices = synth.getVoices().filter(matchVoiceToLang);
+  console.log('voices');
+  utterance.voice = voices[2];
+}
+
+// Speech recognition
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 
 // Btn's
@@ -53,12 +80,16 @@ const showCurrentQuestion = () => {
   currentQuestion++;
   console.log(currentQuestion);
   if (currentQuestion === 1) {
+    // Show the first question
     introSection.classList.add('hidden');
     quizSection.classList.remove('hidden');
+
   } else if (currentQuestion === 2) {
+    // Show second question 2
     quizQuestion1.classList.add('hidden');
     quizQuestion2.classList.remove('hidden');
   } else {
+    // Show last question
     quizQuestion2.classList.add('hidden');
     quizQuestion3.classList.remove('hidden');
   }
