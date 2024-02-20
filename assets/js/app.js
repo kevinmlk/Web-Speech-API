@@ -6,7 +6,7 @@ const synth = window.speechSynthesis;
 // Store the utterance in a variable
 let utterance = new SpeechSynthesisUtterance();
 // utterance.text = 'Hello world!';
-utterance.lang = 'en-US';
+utterance.lang = 'nl-BE';
 utterance.pitch = 1.2;
 utterance.rate = .9;
 
@@ -21,7 +21,7 @@ function matchVoiceToLang(voice) {
 synth.onvoiceschanged = () => {
   let voices = synth.getVoices().filter(matchVoiceToLang);
   console.log('voices');
-  utterance.voice = voices[2];
+  utterance.voice = voices[3];
 }
 
 // Speech recognition
@@ -84,14 +84,29 @@ const showCurrentQuestion = () => {
     introSection.classList.add('hidden');
     quizSection.classList.remove('hidden');
 
+    // Read the question with the possible answers to the user
+    utterance.text = document.querySelector('#text-question-1').textContent;
+    console.log(utterance);
+    synth.speak(utterance);
+
   } else if (currentQuestion === 2) {
     // Show second question 2
     quizQuestion1.classList.add('hidden');
     quizQuestion2.classList.remove('hidden');
+
+    // Read the question with the possible answers to the user
+    utterance.text = document.querySelector('#text-question-2').textContent;
+    console.log(utterance);
+    synth.speak(utterance);
   } else {
     // Show last question
     quizQuestion2.classList.add('hidden');
     quizQuestion3.classList.remove('hidden');
+
+    // Read the question with the possible answers to the user
+    utterance.text = document.querySelector('#text-question-3').textContent;
+    console.log(utterance);
+    synth.speak(utterance);
   }
 
   // Hide succes message
