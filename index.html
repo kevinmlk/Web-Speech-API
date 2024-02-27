@@ -17,6 +17,8 @@
 </head>
 <!-- Start Body -->
 <body>
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
   <!-- Main Section -->
   <main class="container d-flex flex-column justify-content-center align-items-center mt-5 pt-5">
     <section id="intro-section" class="text-center d-flex flex-column align-items-center gap-3 mt-5 pt-5">
@@ -32,48 +34,20 @@
 
     <!-- Quiz Section -->
     <section id="quiz-section" class="hidden mt-5 pt-5">
-      <!-- Question 1 -->
+      <!-- Question-->
       <article class="question-article d-flex flex-column align-items-center gap-3 justify-content-center">
-        <div id="quiz-question-1" class="d-flex flex-column justify-content-center align-items-center text-center">
-          <h2>Vraag 1</h2>
+        <div id="quiz-question" class="d-flex flex-column justify-content-center align-items-center text-center">
+          <h2></h2>
           <p>Tot welke XD manifesto behoort de onderstaande beschrijving?</p>
-          <p id="text-question-1">We doen er alles aan om dromen werkelijkheid te laten worden. Onze verbeeldingskracht is rebels en limietloos.</p>
-          <ul class="answers-container d-flex gap-5">
-            <li>we are full of respect</li>
-            <li>pragmatic dreamers</li>
-            <li>determined to not do basic</li>
-          </ul>
-        </div>
-
-        <!-- Question 2 -->
-        <div id="quiz-question-2" class="hidden d-flex flex-column justify-content-center align-items-center text-center">
-          <h2>Vraag 2</h2>
-          <p>Tot welke XD manifesto behoort de onderstaande beschrijving?</p>
-          <p id="text-question-2">Door af te wachten gaan we er niet geraken, eigen initiatieven nemen it is!</p>
-          <ul class="answers-container d-flex gap-5">
-            <li>our very own progress</li>
-            <li>one hell of a team</li>
-            <li>we are digital experience design</li>
-          </ul>
-        </div>
-
-        <!-- Question 3 -->
-        <div id="quiz-question-3" class="hidden d-flex flex-column justify-content-center align-items-center text-center">
-          <h2>Vraag 3</h2>
-          <p>Tot welke XD manifesto behoort de onderstaande beschrijving?</p>
-          <p id="text-question-3">We got it all. Creativiteit, technische vaardigheden en soft skills gaan hand in hand. Design-development, win-win</p>
-          <ul class="answers-container d-flex gap-5">
-            <li>we are full of respect</li>
-            <li>always in for a challenge</li>
-            <li>all inclusive</li>
-          </ul>
+          <p id="text-question"></p>
+          <ul class="answers-container d-flex gap-5"></ul>
         </div>
 
         <!-- Speech button -->
         <button class="btn btn-primary speak-button">Spreek antwoord in</button>
         <p class="output">Ingesproken antwoord: </p>
         <!-- Succes message & next btn -->
-        <div class="hidden succes-message-container">
+        <div class="hidden succes-message-container d-flex align-items-center flex-column">
           <h3>Uw antwoord is juist!</h3>
           <button class="btn btn-primary next-question-button">Volgende vraag</button>
         </div>
@@ -81,6 +55,8 @@
     </section>
   </main>
   <!-- JS Script -->
-  <script defer src="./assets/js/app.js"></script>
+  <script src="./assets/js/particles/particles.min.js"></script>
+  <script src="./assets/js/particles/app.js"></script>
+  <script defer src="./assets/js/content.js"></script>
 </body>
 </html>

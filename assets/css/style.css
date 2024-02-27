@@ -50,3 +50,18 @@ p {
   background-color: var(--xd-white);
   color: var(--xd-black);
 }
+
+.particles-js-canvas-el {
+  position: absolute;
+  pointer-events: none;
+  width: 100vw !important;
+  height: 94vh !important;
+}
+
+.green-text {
+  color: rgb(0, 177, 0);
+}
+
+.red-text {
+  color: rgb(204, 2, 2);
+}
