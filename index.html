@@ -3,9 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Speech API</title>
+  <!-- CSS Links -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" type="text/css" href="./assets/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <!-- Tab Title -->
+  <title>Web Speech API - Quiz</title>
 </head>
+<!-- Start Body -->
 <body>
-  
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+  <!-- Main Section -->
+  <main class="container d-flex flex-column justify-content-center align-items-center mt-5 pt-5">
+    <section id="intro-section" class="text-center d-flex flex-column align-items-center gap-3 mt-5 pt-5">
+      <!-- Intro Section -->
+        <p>#WeAreXD</p>
+        <h1>Welkom bij de XD Quiz</h1>
+        <p>Test uw kennis over de opleiding Digital Experience Design door het voltooien van deze korte quiz!
+          U krijgt enkele beschrijvingen over een specifieke manifesto en het is aan u om te raden over welke manifesto het gaat.
+          Uw antwoord mag u via de microfoon inspreken en wij controleren of dat u de juiste manifesto heeft ingesproken.
+        </p>
+        <button id="start-button" class="btn btn-primary align-self-center">Start Quiz</button>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz-section" class="hidden mt-5 pt-5">
+      <!-- Question-->
+      <article class="question-article d-flex flex-column align-items-center gap-3 justify-content-center">
+        <div id="quiz-question" class="d-flex flex-column justify-content-center align-items-center text-center">
+          <h2></h2>
+          <p>Tot welke XD manifesto behoort de onderstaande beschrijving?</p>
+          <p id="text-question"></p>
+          <ul class="answers-container d-flex gap-5"></ul>
+        </div>
+
+        <!-- Speech button -->
+        <button class="btn btn-primary speak-button">Spreek antwoord in</button>
+        <p class="output">Ingesproken antwoord: </p>
+        <!-- Succes message & next btn -->
+        <div class="hidden succes-message-container d-flex align-items-center flex-column">
+          <h3>Uw antwoord is juist!</h3>
+          <button class="btn btn-primary next-question-button">Volgende vraag</button>
+        </div>
+      </article>
+    </section>
+  </main>
+  <!-- JS Script -->
+  <script src="./assets/js/particles/particles.min.js"></script>
+  <script src="./assets/js/particles/app.js"></script>
+  <script defer src="./assets/js/content.js"></script>
 </body>
 </html>
