@@ -1,2 +1,2 @@
 # 🏹 Challenge #1 - Speech Quiz
-Website link: [interactive-dev.kevinmalekera.be](https://interactive-dev.kevinmalekera.be).
+Live demo: [interactive-dev.kevinmalekera.be/speech-quiz](https://interactive-dev.kevinmalekera.be/speech-quiz).
